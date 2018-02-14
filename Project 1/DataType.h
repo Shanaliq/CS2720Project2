@@ -12,3 +12,21 @@
 #include <stdio.h>
 
 #endif /* DataType_h */
+
+class DataType{
+public:
+    enum Comparison{
+        GREATER = 1,
+        LESS = -1,
+        EQUAL = 0
+    };
+    
+    explicit DataType(int value);
+    Comparison compareTo(DataType &item);
+    int getValue() const;
+
+private:
+    int value;
+
+    
+};
