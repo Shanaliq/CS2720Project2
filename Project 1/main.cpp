@@ -9,8 +9,11 @@
 #include <iostream>
 #include "SortedLinkedList.h"
 #include <fstream>
+#include "DataType.cpp"
 int x;
 using namespace std;
+
+SortedLinkedList *list = new SortedLinkedList();
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -18,16 +21,19 @@ int main(int argc, const char * argv[]) {
    
     x = getchar();
     ifstream inFile;
-    inFile.open(argv[2]);
+    inFile.open("/Users/Home/Desktop/Project 1/input.txt");
     if(!inFile){
-        cout << "Unable to open file";
+        cout << "Unable to open file\n";
         exit(1);
     }
+    else{
+    }
     while (inFile >> x){
-        std::cout << x;
-        std::cout << " ";
+        DataType *input = new DataType(x);
+        list->insertItem(*input);
     }
     inFile.close();
+    list->printList();
 }
 
 
