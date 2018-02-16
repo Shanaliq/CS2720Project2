@@ -9,6 +9,7 @@
 #include <iostream>
 #include "SortedLinkedList.h"
 using namespace std;
+int cTest = 0;
 
 SortedLinkedList::SortedLinkedList() {
 	count = 0;
@@ -31,26 +32,22 @@ int SortedLinkedList::length() const {
 
 void SortedLinkedList::insertItem(DataType & item) {
     ListNode * input = new ListNode(item); // creating a new node and filling it with the correct int value
-
-  /*  if(head == NULL){
-        head = input;
-        currentPos = input;
-    }
-    else{
-        currentPos->next = input;
-    }*/
-    
-    
-     //below code tried to implement Sorted list. (does so incorrecty)
     if (currentPos == NULL){
 		currentPos = input;
         start = currentPos;
 	}
     else{
         currentPos->next = input;
-        input->next = currentPos;
         currentPos = input;
     }
+}
+//previous code, attempts to make a sortedLinkedList. (didnt work numbers not in order)
+    /*  if(head == NULL){
+     head = input;
+     currentPos = input;
+     }
+     else{
+     currentPos->next = input;
     }
 	/*else{
 		currentPos = head;		

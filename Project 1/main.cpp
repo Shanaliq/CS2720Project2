@@ -20,16 +20,16 @@ int main(int argc, const char * argv[]) {
    
     x = getchar();
     ifstream inFile;
-    inFile.open("/Users/Home/Desktop/Project 1/input.txt");
+    inFile.open("/Users/nekosama/Desktop/Project-1-Data-Structures/input.txt");
     if(!inFile){
         cout << "Unable to open file\n";
         exit(1);
     }
     else{
-    }
     while (inFile >> x){
         DataType *input = new DataType(x);
         list->insertItem(*input);
+    }
     }
     inFile.close();
     list->printList();
