@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F4507FCC203664A9009A2637 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = SOURCE_ROOT; };
 		F4907EB6203209CA00551C8A /* Project 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4907EB9203209CA00551C8A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F4907EC0203213F900551C8A /* DataType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataType.cpp; sourceTree = "<group>"; };
@@ -67,12 +68,13 @@
 			isa = PBXGroup;
 			children = (
 				F4907EB9203209CA00551C8A /* main.cpp */,
-				F4907EC32032169300551C8A /* SortedLinkedList.cpp */,
 				F4907EC42032169300551C8A /* SortedLinkedList.h */,
+				F4907EC32032169300551C8A /* SortedLinkedList.cpp */,
 				F4907EC0203213F900551C8A /* DataType.cpp */,
 				F4907EC1203213F900551C8A /* DataType.h */,
 				F4907EC720321AFD00551C8A /* ListNode.h */,
 				F4B8D1A02033BDFA0093DD30 /* ListNode.cpp */,
+				F4507FCC203664A9009A2637 /* input.txt */,
 			);
 			path = "Project 1";
 			sourceTree = "<group>";
