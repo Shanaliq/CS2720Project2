@@ -8,9 +8,7 @@
 
 #ifndef ListNode_h
 #define ListNode_h
-
 #include <stdio.h>
-
 #include "DataType.h"
 #endif /* ListNode_h */
 

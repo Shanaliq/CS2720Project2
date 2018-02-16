@@ -10,13 +10,13 @@
 #include "DataType.h"
 #include <stdio.h>
 
-
+int value;
  DataType::DataType(int value){
     this->value = value;
 }
 
 DataType::Comparison DataType::compareTo(DataType &item){
-    if(item.value < this -> value){
+    if(item.value < this->value){
         return GREATER;
     }
     else if(item.value > this -> value){
