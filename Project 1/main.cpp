@@ -27,6 +27,7 @@ int main(int argc, const char * argv[]) {
         std::cout << x;
         std::cout << " ";
     }
+    inFile.close();
 }
 
 
