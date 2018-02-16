@@ -49,7 +49,7 @@ void SortedLinkedList::insertItem(DataType & item) {
      else{
      currentPos->next = input;
     }
-	/*else{
+	else{
 		currentPos = head;		
 		while (input->next != NULL && currentPos->next->item.getValue() < input->item.getValue()) {
 			currentPos = currentPos->next;
