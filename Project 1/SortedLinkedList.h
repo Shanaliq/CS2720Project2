@@ -26,6 +26,7 @@ public:
     int searchItem(DataType &item);
     void clear();
     void pairwiseSwap();
+	void printList();
     
     
 };

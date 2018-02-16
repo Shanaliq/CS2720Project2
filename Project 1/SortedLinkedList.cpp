@@ -6,8 +6,9 @@
 //  Copyright © 2018 Shan Qamruddin. All rights reserved.
 //
 
+#include <iostream>
 #include "SortedLinkedList.h"
-
+using namespace std;
 
 SortedLinkedList::SortedLinkedList() {
 	count = 0;
@@ -43,6 +44,14 @@ void SortedLinkedList::insertItem(DataType & item) {
 		input->next = currentPos->next;
 		currentPos->next = input;
 
+	}
+}
+
+void SortedLinkedList::printList() {
+	ListNode * tempPtr = head;
+	while (tempPtr != NULL) {
+		cout << tempPtr->item.getValue();
+		tempPtr = tempPtr->next;
 	}
 }
 
