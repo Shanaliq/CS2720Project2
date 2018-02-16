@@ -9,7 +9,6 @@
 #include <iostream>
 #include "SortedLinkedList.h"
 #include <fstream>
-#include "DataType.cpp"
 int x;
 using namespace std;
 

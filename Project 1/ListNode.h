@@ -19,6 +19,5 @@ struct ListNode{
     DataType item;
     ListNode *next;
     explicit ListNode(DataType &item):item(item){}
-    
 };
 

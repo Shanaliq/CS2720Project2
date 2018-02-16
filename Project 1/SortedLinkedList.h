@@ -15,7 +15,8 @@
 class SortedLinkedList{
 private:
     int count;
-    ListNode *head;
+    ListNode *currentPos;
+    ListNode *start;
     
 public:
     SortedLinkedList();
