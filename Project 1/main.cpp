@@ -12,13 +12,13 @@
 int fileReadingNumber;
 char userInputChar ;
 int userInputNum;
+int continueLoop;
 using namespace std;
 
 SortedLinkedList *list = new SortedLinkedList();
 
 void printCommands(){ // prints out the commands to the screen and waits for user input.
-    std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(f) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(s) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n Enter a command:";
-        userInputChar = getchar();
+    std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(f) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(s) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n";
 }
 
 
@@ -51,68 +51,81 @@ void printBreakLine(){
 int main(int argc, const char * argv[]) {
     fileHandler(); // handles opening the file and creating an (unsorted) Linked List
     printCommands(); // prints the commands and wait for user input.
-    switch (userInputChar) {
-        case 'i':
+    continueLoop = 1;
+    list->printList();
+    while(continueLoop == 1){
+        std::cout << "Enter a command: ";
+        cin >> userInputChar;
+        switch (userInputChar) {
+        case 'i': {
             list->printList();
-            std::cout << "What Number would you like to delete: ";
+            std::cout << "What Number would you like to insert: ";
             cin >> userInputNum;
             DataType *itemToMake = new DataType(userInputNum);
-            list->deleteItem(*itemToMake);
+            list->insertItem(*itemToMake);
             list->printList();
+            printBreakLine();
             delete itemToMake;
-        case 'd':
+            break;
+        }
+        case 'd': {
             list->printList();
             std::cout << "What Number would you like to delete: ";
             cin >> userInputNum;
             DataType *itemToDelete = new DataType(userInputNum);
             list->deleteItem(*itemToDelete);
+            list->printList();
+            printBreakLine();
             delete itemToDelete;
             break;
-            
-        case 's':
-            <#statements#>
+        }
+            case 's': {
+            list->printList();
+            std::cout << "What Number would you like to search for: ";
+            cin >> userInputNum;
+            DataType *itemToSearch = new DataType(userInputNum);
+            std::cout << list->searchItem(*itemToSearch)<< " \n";
+            list->printList();
+            printBreakLine();
+            delete itemToSearch;
             break;
+            }
+                
+            case 'n':   {
             
-        case 'n':
-            <#statements#>
             break;
+            }
+          
+            case 'r': {
             
-        case 'r':
-            <#statements#>
             break;
+            }
+          
+            case 'p':{
             
-        case 'p':
-            <#statements#>
             break;
+            }
+        
+            case 'l':{
+                std
+                break;
+            }
+            case 'c': {
+                
+                break;
+            }
+            case 'b': {
             
-        case 'l':
-            <#statements#>
-            break;
-            
-        case 'c':
-            <#statements#>
-            break;
-            
-        case 'b':
-            <#statements#>
-            break;
-            
-        case 'q':
-            <#statements#>
-            break;
-            
-        default:
-            break;
-    }
-    
-    if(userInputChar == 'd'){
-        list->printList();
-        std::cout << "What Number would you like to delete: ";
-        cin >> userInputNum;
-        DataType *itemToDelete = new DataType(userInputNum);
-        list->deleteItem(*itemToDelete);
-        list->printList();
-        delete itemToDelete;
+                break;
+                }
+            case 'q':{
+                continueLoop = 0;
+                break;
+            }
+            default:
+                std::cout << "That is not a valid Input please try again";
+                break;
+        }
     }
 }
 
