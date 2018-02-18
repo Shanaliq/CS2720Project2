@@ -103,16 +103,18 @@ int main(int argc, const char * argv[]) {
             }
                 
             case 'p':{
-            
+                list->printList();
+                printBreakLine();
             break;
             }
-        
             case 'l':{
-                
+                std::cout<<list->length()<<"\n";
+                printBreakLine();
                 break;
             }
             case 'c': {
-                
+                list->clear();
+                printBreakLine();
                 break;
             }
             case 'b': {
@@ -120,6 +122,7 @@ int main(int argc, const char * argv[]) {
                 break;
                 }
             case 'q':{
+                std::cout << "Good Bye";
                 continueLoop = 0;
                 break;
             }
@@ -128,7 +131,12 @@ int main(int argc, const char * argv[]) {
                 break;
         }
     }
+    exit(0);
 }
+
+
+
+
 
 
 

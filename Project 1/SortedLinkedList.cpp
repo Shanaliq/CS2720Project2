@@ -18,7 +18,13 @@ ListNode *userIterator;
     }
 
     SortedLinkedList::~SortedLinkedList() {
-        
+        iterator = start;
+        while (iterator != NULL) {
+            ListNode* temp = iterator->next;
+            delete iterator;
+            iterator = temp;
+        }
+        start = 0;
     }
 
     int SortedLinkedList::length() const {
@@ -117,8 +123,17 @@ ListNode *userIterator;
     }
 
     void SortedLinkedList::clear(){
-        
+        iterator = start;
+        start = NULL;
+        ListNode * temp;
+        while(iterator != NULL) {
+            temp = iterator->next;
+            delete iterator;
+            iterator = temp;
+            lengthCount--;
+        }
     }
+
 
     void SortedLinkedList::pairwiseSwap(){
     
