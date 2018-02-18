@@ -4,7 +4,6 @@
 //
 //  Created by Shan Qamruddin on 2/12/18.
 //  Copyright © 2018 Shan Qamruddin. All rights reserved.
-//
 
 #include <iostream>
 #include "SortedLinkedList.h"

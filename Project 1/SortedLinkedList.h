@@ -12,12 +12,12 @@
 #endif /* SortedLinkedList_h */
 #include "ListNode.h"
 
-class SortedLinkedList{
+class SortedLinkedList {
 private:
-    int Length; // should contain the length of the list.
-    ListNode *start;
-    ListNode *iterator;
-    ListNode *prevNode;
+	int Length; // should contain the length of the list.
+	ListNode *start;
+	ListNode *iterator;
+	ListNode *prevNode;
 
 public:
     SortedLinkedList(); // List is Created
@@ -32,6 +32,7 @@ public:
     int iterateList();
     void resetIterator();
 };
+
 
 
 
