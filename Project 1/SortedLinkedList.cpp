@@ -74,6 +74,7 @@ int lengthCount;
                     prevNode->next = iterator->next;
                     delete iterator;
                     lengthCount--;
+                    iterator =prevNode;
                 }
                 else{
                     iterator = iterator->next;
@@ -84,6 +85,7 @@ int lengthCount;
         }
     }
 }
+
 
     int SortedLinkedList::searchItem(DataType &item){
         return 0;
@@ -106,6 +108,7 @@ void SortedLinkedList::printList() { // prints out the linked list.
         tempPtr = tempPtr->next;
     }
     std::cout <<" Length is= ("<<lengthCount<< ") ";
+    std::cout << "\n";
     free(tempPtr);
 	}
 
