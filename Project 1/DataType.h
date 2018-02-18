@@ -8,23 +8,28 @@
 
 #ifndef DataType_h
 #define DataType_h
-
 #include <stdio.h>
-
 #endif /* DataType_h */
+enum Comparison {LESS = -1, GREATER = 1, EQUAL = 0};
 
 class DataType{
 public:
-    enum Comparison{
-        GREATER = 1,
-        LESS = -1,
-        EQUAL = 0
-    };
-    
-    explicit DataType(int value);
-    Comparison compareTo(DataType &item);
-    int getValue() const;
+    explicit DataType(int val); // DataType Object is Created
+    Comparison compareTo(DataType &item); // returns an Enum that indicates weather the calling object is Greater, Less or Equal to the item.
+    int getValue() const; // return the value instance variable.
 
 private:
     int value;
 };
+
+
+
+
+
+
+
+
+
+
+
+

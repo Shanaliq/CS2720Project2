@@ -19,6 +19,7 @@ void printCommands(){ // prints out the commands to the screen and waits for use
         x = getchar();
 }
 
+
 void fileHandler(){ // handles the file input.
     ifstream inFile;
     inFile.open("/Users/Home/Desktop/Project 1/input.txt");
@@ -29,14 +30,20 @@ void fileHandler(){ // handles the file input.
     else{
         while (inFile >> x){
             DataType *input = new DataType(x);
+            std::cout << x;
             list->insertItem(*input);
         }
     }
         inFile.close();
 }
 
+void starter(){
+    DataType *startData = new DataType(0);
+    list->insertItem(*startData);
+}
 
 int main(int argc, const char * argv[]) {
+    //starter();
     fileHandler(); // handles opening the file and creating an (unsorted) Linked List
     printCommands(); // prints the commands and wait for user input.
     list->printList(); // Prints the list out in its current state.

@@ -9,121 +9,77 @@
 #include <iostream>
 #include "SortedLinkedList.h"
 using namespace std;
-int cTest = 0;
-ListNode * tempPtr;
-SortedLinkedList::SortedLinkedList() {
-    ListNode * input = new ListNode(NULL);
-    start = input;
-	count = 0;
-    tempPtr = NULL;
-	currentPos= NULL;
-    start = NULL;
-    iterator = NULL;
-}
-
-SortedLinkedList::~SortedLinkedList() {
-	while (currentPos != NULL) {
-		tempPtr = currentPos;
-		currentPos = currentPos -> next;
-		delete tempPtr;
-	}
-	count = 0;
-    free(tempPtr);
-}
-
-int SortedLinkedList::length() const {
-	return count;
-}
-
-void SortedLinkedList::insertItem(DataType & item) {
-    ListNode * input = new ListNode(item);
-    // creating a new node and filling it with the correct int value
-    //So this currently causes a memory leak or something. the logic is there kinda...
-    /* the logic: */
-    //First if there is no node it will create one.
-    if (start == NULL){ //
-        iterator = input;
-		currentPos = input;
-        start = currentPos;
-	}
-    /*if there is a node it will check if the starting node is larger or smaller than the input node. if it is smaller than the starting node then there is no need to go further.*/
-    else if(start->item.compareTo(item) == DataType::GREATER){
-        input->next = start;
-        start = input;
+int lengthCount;
+    SortedLinkedList::SortedLinkedList() {
+        lengthCount = 0;
     }
-    /* here we see that if the input node is larger than the starting node it will begin to iterate though the list of nodes. when it finally finds a node that is greater than the value (ie. no longer less than the input node) then it will come out of the while loop, set the previous node to point to the input node and the input node to point to the one greater than it. it will then free the temporary variables. */
-    else if(start->item.compareTo(input->item) == DataType::LESS){
-        currentPos = start;
-        while(currentPos!= NULL && currentPos->item.compareTo(input->item) == DataType::GREATER){
-            if(currentPos->next != NULL){
-                currentPos = currentPos->next;
-            }
-            else{
-                currentPos->next = input;
-                break;
-            }
+
+    SortedLinkedList::~SortedLinkedList() {
+
+    }
+
+    int SortedLinkedList::length() const {
+        return lengthCount;
+    }
+
+    void SortedLinkedList::insertItem(DataType &item) {
+        ListNode *newNode = new ListNode(item);
+        if(lengthCount == 0){
+            start = newNode;
+            iterator = newNode;
+            start->next = NULL;
+            std::cout << "handling "<< newNode->item.getValue()<< "\n";
         }
+        else if(start->item.compareTo(newNode->item) == 1){
+            newNode->next =start;
+            start=newNode;
+            std::cout << "handling "<< newNode->item.getValue()<< "\n";
+        }
+        else if(start->item.compareTo(newNode->item) == -1){
+            iterator = start;
+            while(iterator->next != NULL){
+                if(iterator->next->item.compareTo(newNode->item) == -1){
+                    iterator = iterator->next;
+                }
+                else{
+                    break;
+                }
+            }
+            ListNode *tempo;
+            tempo = iterator->next;
+            newNode -> next = tempo;
+            iterator->next =newNode;
+        }
+        std::cout << "handling "<< newNode->item.getValue()<< "\n";
+        lengthCount++;
     }
-    free(input);
-}
 
+    void SortedLinkedList::deleteItem(DataType &item){
+        
+    }
 
+    int SortedLinkedList::searchItem(DataType &item){
+        return 0;
+    }
+
+    void SortedLinkedList::clear(){
+    
+    }
+
+    void SortedLinkedList::pairwiseSwap(){
+    
+    }
+
+void SortedLinkedList::printList() { // prints out the linked list.
+    ListNode *tempPtr;
+    tempPtr = start;
+    while (tempPtr != nullptr) {
+        std::cout << tempPtr->item.getValue();
+        std::cout << " ";
+        tempPtr = tempPtr->next;
+    }
+    free(tempPtr);
+	}
 
 
     
-    //ATTEMPT 1, WRONG :(
-    /*else if(currentPos->item.getValue() >= input->item.getValue()){
-        currentPos->next = input;
-        prevPos = currentPos;
-        currentPos = input;
-    }
-    else if(prevPos == NULL&&(currentPos->item.getValue() < input->item.getValue())){
-        input->next = currentPos;
-        start = input;
-        prevPos = NULL;
-    }
-    else if(currentPos->item.getValue() < input->item.getValue()){
-        prevPos -> next = input;
-        input -> next = currentPos;
-        prevPos = input;
-    }*/
-//previous code, attempts to make a sortedLinkedList. (didnt work numbers not in order)
-    /*  if(head == NULL){
-     head = input;
-     currentPos = input;
-     }
-     else{
-     currentPos->next = input;
-    }
-	else{
-		currentPos = head;		
-		while (input->next != NULL && currentPos->next->item.getValue() < input->item.getValue()) {
-			currentPos = currentPos->next;
-		}
-		input->next = currentPos->next;
-		currentPos->next = input;
-	}*/
-
-
-void SortedLinkedList::printList() { // prints out the linked list.
-	tempPtr = start;
-	while (tempPtr != NULL) {
-        std::cout << tempPtr->item.getValue();
-        std::cout << " ";
-		tempPtr = tempPtr->next;
-	}
-    free(tempPtr);
-}
-
-
-
-
-	
-
-
-
-
-
-
-
-

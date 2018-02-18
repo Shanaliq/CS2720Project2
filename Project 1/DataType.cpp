@@ -10,32 +10,25 @@
 #include "DataType.h"
 #include <stdio.h>
 
-int value;
- DataType::DataType(int value){
-    this->value = value;
+ DataType::DataType(int val){
+     value = val;
 }
 
-DataType::Comparison DataType::compareTo(DataType &item){
-    if(item.value < this->value){
-        return GREATER;
-    }
-    else if(item.value > this -> value){
+Comparison DataType::compareTo(DataType &item){
+    if(value < item.value){
         return LESS;
     }
-    else if(item.value == this -> value){
-        return EQUAL;
+    else if(value > item.value){
+        return GREATER;
     }
-    else{
-        std::cout << "Error";
+    else {
         return EQUAL;
     }
 }
 
 int DataType::getValue() const{
-    return value;
+    return this->value;
 }
-
-
 
 
 
