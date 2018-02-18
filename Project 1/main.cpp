@@ -9,6 +9,7 @@
 #include <iostream>
 #include "SortedLinkedList.h"
 #include <fstream>
+#include <string>
 int fileReadingNumber;
 char userInputChar ;
 int userInputNum;
@@ -18,34 +19,34 @@ using namespace std;
 SortedLinkedList *list = new SortedLinkedList();
 
 void printCommands(){ // prints out the commands to the screen and waits for user input.
-    std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(f) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(s) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n";
+	std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(f) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(s) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n";
 }
 
 
-void fileHandler(){ // handles the file input.
-    ifstream inFile;
-    inFile.open("/Users/Home/Desktop/Project 1/input.txt");
-    if(!inFile){
-        cout << "Unable to open file\n";
-        exit(1);
-    }
-    else{
-        while (inFile >> fileReadingNumber){
-            DataType *input = new DataType(fileReadingNumber);
-            list->insertItem(*input);
-        }
-    }
-        inFile.close();
+void fileHandler(string input){ // handles the file input.
+	ifstream inFile;
+	inFile.open(input);
+	if(!inFile){
+		cout << "Unable to open file\n";
+		exit(1);
+	}
+	else{
+		while (inFile >> fileReadingNumber){
+			DataType *input = new DataType(fileReadingNumber);
+			list->insertItem(*input);
+		}
+	}
+		inFile.close();
 }
 
 void starter(){
-    DataType *startData = new DataType(0);
-    list->insertItem(*startData);
+	DataType *startData = new DataType(0);
+	list->insertItem(*startData);
 }
 
 void printBreakLine(){
-    std::cout<<"-------------------------------- \n";
-    
+	std::cout<<"-------------------------------- \n";
+	
 }
 
 int main(int argc, const char * argv[]) {
@@ -135,10 +136,6 @@ int main(int argc, const char * argv[]) {
     }
     exit(0);
 }
-
-
-
-
 
 
 
