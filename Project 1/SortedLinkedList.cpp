@@ -30,6 +30,7 @@ int SortedLinkedList::length() const {
 	return lengthCount;
 }
 
+<<<<<<< HEAD
 void SortedLinkedList::insertItem(DataType &item) {
 	ListNode *newNode = new ListNode(item);
 	if (lengthCount == 0) {
@@ -64,6 +65,42 @@ void SortedLinkedList::insertItem(DataType &item) {
 	// std::cout << "handling "<< newNode->item.getValue()<< "\n";
 	lengthCount++;
 }
+=======
+    void SortedLinkedList::insertItem(DataType &item) {
+        ListNode *newNode = new ListNode(item);
+        if(lengthCount == 0){
+            start = newNode;
+            userIterator=start;
+            userIterator = start;
+            iterator = newNode;
+            start->next = NULL;
+          //  std::cout << "handling "<< newNode->item.getValue()<< "\n";
+        }
+        else if(start->item.compareTo(newNode->item) == 1){
+            newNode->next =start;
+            start=newNode;
+            userIterator=start;
+          //  std::cout << "handling "<< newNode->item.getValue()<< "\n";
+        }
+        else if(start->item.compareTo(newNode->item) == -1){
+            iterator = start;
+            while(iterator->next != NULL){
+                if(iterator->next->item.compareTo(newNode->item) == -1){
+                    iterator = iterator->next;
+                }
+                else{
+                    break;
+                }
+            }
+            ListNode *tempo;
+            tempo = iterator->next;
+            newNode -> next = tempo;
+            iterator->next =newNode;
+        }
+       // std::cout << "handling "<< newNode->item.getValue()<< "\n";
+        lengthCount++;
+    }
+>>>>>>> b324470635beeead078b8f6abd9d2c017d1fec35
 
 void SortedLinkedList::deleteItem(DataType &item) {
 	iterator = start;
@@ -98,6 +135,7 @@ void SortedLinkedList::deleteItem(DataType &item) {
 }
 
 
+<<<<<<< HEAD
 int SortedLinkedList::searchItem(DataType &item) {
 	iterator = start;
 	int checkLength = 0;
@@ -131,6 +169,29 @@ void SortedLinkedList::clear() {
 		lengthCount--;
 	}
 }
+=======
+    int SortedLinkedList::searchItem(DataType &item){
+        iterator = start;
+        int checkLength = 0;
+        if (iterator->next == NULL) {
+            if (iterator->item.getValue() == item.getValue()) {
+                return 0;
+            }
+            else {
+                std::cout << "not found 1 " << endl;
+                return -1;
+            }
+        }
+        while (checkLength < lengthCount) {
+            if(iterator->item.getValue() == item.getValue()){
+                return checkLength;
+            }
+            iterator = iterator->next;
+            checkLength++;
+        }
+        return -1;
+    }
+>>>>>>> b324470635beeead078b8f6abd9d2c017d1fec35
 
 
 void SortedLinkedList::pairwiseSwap() {
