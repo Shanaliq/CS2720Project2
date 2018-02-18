@@ -44,7 +44,7 @@ ListNode *userIterator;
             newNode->next =start;
             start=newNode;
             userIterator=start;
-            std::cout << "handling "<< newNode->item.getValue()<< "\n";
+          //  std::cout << "handling "<< newNode->item.getValue()<< "\n";
         }
         else if(start->item.compareTo(newNode->item) == -1){
             iterator = start;
@@ -61,7 +61,7 @@ ListNode *userIterator;
             newNode -> next = tempo;
             iterator->next =newNode;
         }
-        std::cout << "handling "<< newNode->item.getValue()<< "\n";
+       // std::cout << "handling "<< newNode->item.getValue()<< "\n";
         lengthCount++;
     }
 
@@ -112,7 +112,6 @@ ListNode *userIterator;
         }
         while (checkLength < lengthCount) {
             if(iterator->item.getValue() == item.getValue()){
-                checkLength++;
                 return checkLength;
             }
             iterator = iterator->next;

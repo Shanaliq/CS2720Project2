@@ -18,7 +18,7 @@ using namespace std;
 SortedLinkedList *list = new SortedLinkedList();
 
 void printCommands(){ // prints out the commands to the screen and waits for user input.
-    std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(f) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(s) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n";
+    std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(s) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(b) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n";
 }
 
 
@@ -109,7 +109,7 @@ int main(int argc, const char * argv[]) {
             break;
             }
             case 'l':{
-                std::cout<<list->length()<<"\n";
+                std::cout<<"List Length is "<<list->length()<<"\n";
                 printBreakLine();
                 break;
             }
