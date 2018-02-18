@@ -30,7 +30,6 @@ int SortedLinkedList::length() const {
 	return lengthCount;
 }
 
-<<<<<<< HEAD
 void SortedLinkedList::insertItem(DataType &item) {
 	ListNode *newNode = new ListNode(item);
 	if (lengthCount == 0) {
@@ -39,7 +38,7 @@ void SortedLinkedList::insertItem(DataType &item) {
 		userIterator = start;
 		iterator = newNode;
 		start->next = NULL;
-		//  std::cout << "handling "<< newNode->item.getValue()<< "\n";
+		//   std::cout << "handling "<< newNode->item.getValue()<< "\n";
 	}
 	else if (start->item.compareTo(newNode->item) == 1) {
 		newNode->next = start;
@@ -65,7 +64,6 @@ void SortedLinkedList::insertItem(DataType &item) {
 	// std::cout << "handling "<< newNode->item.getValue()<< "\n";
 	lengthCount++;
 }
-=======
     void SortedLinkedList::insertItem(DataType &item) {
         ListNode *newNode = new ListNode(item);
         if(lengthCount == 0){
@@ -100,7 +98,6 @@ void SortedLinkedList::insertItem(DataType &item) {
        // std::cout << "handling "<< newNode->item.getValue()<< "\n";
         lengthCount++;
     }
->>>>>>> b324470635beeead078b8f6abd9d2c017d1fec35
 
 void SortedLinkedList::deleteItem(DataType &item) {
 	iterator = start;
@@ -134,8 +131,6 @@ void SortedLinkedList::deleteItem(DataType &item) {
 	}
 }
 
-
-<<<<<<< HEAD
 int SortedLinkedList::searchItem(DataType &item) {
 	iterator = start;
 	int checkLength = 0;
@@ -169,7 +164,6 @@ void SortedLinkedList::clear() {
 		lengthCount--;
 	}
 }
-=======
     int SortedLinkedList::searchItem(DataType &item){
         iterator = start;
         int checkLength = 0;
@@ -191,7 +185,6 @@ void SortedLinkedList::clear() {
         }
         return -1;
     }
->>>>>>> b324470635beeead078b8f6abd9d2c017d1fec35
 
 
 void SortedLinkedList::pairwiseSwap() {
