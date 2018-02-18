@@ -30,6 +30,7 @@ public:
     void pairwiseSwap(); // items in the list are sorted before swapping and the adjacent pare nodes are swapped according to their index positions.
 	void printList();
     int iterateList();
+    void resetIterator();
 };
 
 

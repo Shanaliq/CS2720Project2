@@ -92,22 +92,23 @@ int main(int argc, const char * argv[]) {
             }
                 
             case 'n':   {
-            
+                std::cout<<list->iterateList()<<"\n";
+                printBreakLine();
             break;
             }
-          
             case 'r': {
-            
+                list->resetIterator();
+                printBreakLine();
             break;
             }
-          
+                
             case 'p':{
             
             break;
             }
         
             case 'l':{
-                std
+                
                 break;
             }
             case 'c': {

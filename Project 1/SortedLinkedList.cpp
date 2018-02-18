@@ -10,9 +10,11 @@
 #include "SortedLinkedList.h"
 using namespace std;
 int lengthCount;
-
+int firstIterate;
+ListNode *userIterator;
     SortedLinkedList::SortedLinkedList() {
         lengthCount = 0;
+        firstIterate = 0;
     }
 
     SortedLinkedList::~SortedLinkedList() {
@@ -27,6 +29,8 @@ int lengthCount;
         ListNode *newNode = new ListNode(item);
         if(lengthCount == 0){
             start = newNode;
+            userIterator=start;
+            userIterator = start;
             iterator = newNode;
             start->next = NULL;
           //  std::cout << "handling "<< newNode->item.getValue()<< "\n";
@@ -34,6 +38,7 @@ int lengthCount;
         else if(start->item.compareTo(newNode->item) == 1){
             newNode->next =start;
             start=newNode;
+            userIterator=start;
             std::cout << "handling "<< newNode->item.getValue()<< "\n";
         }
         else if(start->item.compareTo(newNode->item) == -1){
@@ -133,7 +138,17 @@ void SortedLinkedList::printList() { // prints out the linked list.
 	}
 
 int SortedLinkedList::iterateList(){
-    
-    
+    int valueAtPlace;
+    if(userIterator->next != NULL){
+        valueAtPlace = userIterator->item.getValue();
+        userIterator = userIterator->next;
+        return valueAtPlace;
+        }
+        else{
+            return userIterator->item.getValue();
+        }
+}
+void SortedLinkedList::resetIterator(){
+    userIterator = start;
 }
     
