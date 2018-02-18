@@ -33,6 +33,7 @@ void fileHandler(){ // handles the file input.
         while (inFile >> fileReadingNumber){
             DataType *input = new DataType(fileReadingNumber);
             list->insertItem(*input);
+            delete input;
         }
     }
         inFile.close();

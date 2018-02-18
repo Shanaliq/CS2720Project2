@@ -147,7 +147,9 @@ void SortedLinkedList::printList() { // prints out the linked list.
     }
     //std::cout <<" Length is= ("<<lengthCount<< ") ";
     std::cout << "\n";
+    delete tempPtr;
     free(tempPtr);
+    
     }
 
 int SortedLinkedList::iterateList(){
@@ -161,6 +163,7 @@ int SortedLinkedList::iterateList(){
             return userIterator->item.getValue();
         }
 }
+
 void SortedLinkedList::resetIterator(){
     userIterator = start;
 }
