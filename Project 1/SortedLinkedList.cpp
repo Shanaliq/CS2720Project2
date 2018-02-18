@@ -4,7 +4,6 @@
 //
 //  Created by Shan Qamruddin on 2/12/18.
 //  Copyright © 2018 Shan Qamruddin. All rights reserved.
-//
 
 #include <iostream>
 #include "SortedLinkedList.h"
@@ -16,7 +15,13 @@ int lengthCount;
     }
 
     SortedLinkedList::~SortedLinkedList() {
-        
+		iterator = start;
+		while (iterator != NULL) {
+			ListNode* temp = iterator->next;
+			delete iterator;
+			iterator = temp;
+		}
+		start = 0;
     }
 
     int SortedLinkedList::length() const {
@@ -133,7 +138,7 @@ void SortedLinkedList::printList() { // prints out the linked list.
 	}
 
 int SortedLinkedList::iterateList(){
-    
+ 
     
 }
     
