@@ -47,6 +47,9 @@ int main(int argc, const char * argv[]) {
     fileHandler(); // handles opening the file and creating an (unsorted) Linked List
     printCommands(); // prints the commands and wait for user input.
     list->printList(); // Prints the list out in its current state.
+    DataType *deleteItemTest = new DataType(9);
+    list->deleteItem(*deleteItemTest);
+    list->printList();
 }
 
 
