@@ -107,7 +107,6 @@ int main(int argc, const char * argv[]) {
             }
         
             case 'l':{
-                std
                 break;
             }
             case 'c': {
@@ -127,6 +126,7 @@ int main(int argc, const char * argv[]) {
                 break;
         }
     }
+	exit(0);
 }
 
 
