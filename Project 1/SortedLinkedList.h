@@ -17,7 +17,7 @@ private:
     int count;
     ListNode *currentPos;
     ListNode *start;
-    ListNode *prevPos;
+    ListNode *iterator;
     
 public:
     SortedLinkedList();

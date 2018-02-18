@@ -21,7 +21,7 @@ void printCommands(){ // prints out the commands to the screen and waits for use
 
 void fileHandler(){ // handles the file input.
     ifstream inFile;
-    inFile.open("/Users/nekosama/Desktop/Project-1-Data-Structures/input.txt");
+    inFile.open("/Users/Home/Desktop/Project 1/input.txt");
     if(!inFile){
         cout << "Unable to open file\n";
         exit(1);
