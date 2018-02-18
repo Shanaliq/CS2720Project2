@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
         switch (userInputChar) {
         case 'i': {
             list->printList();
-            std::cout << "What Number would you like to insert: ";
+            std::cout << "Enter Number: ";
             cin >> userInputNum;
             DataType *itemToMake = new DataType(userInputNum);
             list->insertItem(*itemToMake);
@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
         }
         case 'd': {
             list->printList();
-            std::cout << "What Number would you like to delete: ";
+            std::cout << "Enter value to delete: ";
             cin >> userInputNum;
             DataType *itemToDelete = new DataType(userInputNum);
             list->deleteItem(*itemToDelete);
@@ -81,7 +81,7 @@ int main(int argc, const char * argv[]) {
         }
             case 's': {
             list->printList();
-            std::cout << "What Number would you like to search for: ";
+            std::cout << "Enter value to search: ";
             cin >> userInputNum;
             DataType *itemToSearch = new DataType(userInputNum);
             std::cout << list->searchItem(*itemToSearch)<< " \n";
@@ -98,6 +98,7 @@ int main(int argc, const char * argv[]) {
             }
             case 'r': {
                 list->resetIterator();
+                std::cout <<"Iterator reset. \n";
                 printBreakLine();
             break;
             }
@@ -114,6 +115,7 @@ int main(int argc, const char * argv[]) {
             }
             case 'c': {
                 list->clear();
+                std::cout << "List cleared \n";
                 printBreakLine();
                 break;
             }
@@ -122,7 +124,7 @@ int main(int argc, const char * argv[]) {
                 break;
                 }
             case 'q':{
-                std::cout << "Good Bye";
+                std::cout << "Quitting program.. \n";
                 continueLoop = 0;
                 break;
             }

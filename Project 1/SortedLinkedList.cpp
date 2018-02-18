@@ -146,7 +146,7 @@ void SortedLinkedList::printList() { // prints out the linked list.
         std::cout << " ";
         tempPtr = tempPtr->next;
     }
-    std::cout <<" Length is= ("<<lengthCount<< ") ";
+    //std::cout <<" Length is= ("<<lengthCount<< ") ";
     std::cout << "\n";
     free(tempPtr);
     }
