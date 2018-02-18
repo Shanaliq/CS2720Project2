@@ -15,7 +15,7 @@ int lengthCount;
     }
 
     SortedLinkedList::~SortedLinkedList() {
-
+        
     }
 
     int SortedLinkedList::length() const {
@@ -56,24 +56,31 @@ int lengthCount;
 
     void SortedLinkedList::deleteItem(DataType &item){
         iterator = start;
+        ListNode *prevNode;
+        prevNode = start;
         int checkLength = 0;
         while(checkLength < lengthCount){
-            if(iterator->item.compareTo(item) == 0){
+            if(start->item.compareTo(item) == 0){
                 start= iterator->next;
                 delete iterator;
                 iterator = start;
                 lengthCount --;
         }
         else{
-            while (iterator->next->item.compareTo(item) != 0) {
-                if(iterator -> next != NULL){
+            while (iterator -> next != NULL) {
+                if(iterator->next->item.compareTo(item) == 0){
+                    prevNode = iterator;
                     iterator = iterator->next;
+                    prevNode->next = iterator->next;
+                    delete iterator;
+                    lengthCount--;
                 }
                 else{
-                    std::cout<< "no such data exists in the list";
+                    iterator = iterator->next;
+                    checkLength++;
                 }
+                checkLength++;
             }
-            checkLength++;
         }
     }
 }
