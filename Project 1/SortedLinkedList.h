@@ -14,10 +14,10 @@
 
 class SortedLinkedList {
 private:
-	int Length; // should contain the length of the list.
-	ListNode *start;
-	ListNode *iterator;
-	ListNode *prevNode;
+    int Length; // should contain the length of the list.
+    ListNode *start;
+    ListNode *iterator;
+    ListNode *prevNode;
 
 public:
     SortedLinkedList(); // List is Created
@@ -28,7 +28,7 @@ public:
     int searchItem(DataType &item); //position of node that contains the item is returned
     void clear(); // list contains no items, Length is 0, all node pointer memory freed.
     void pairwiseSwap(); // items in the list are sorted before swapping and the adjacent pare nodes are swapped according to their index positions.
-	void printList();
+    void printList();
     int iterateList();
     void resetIterator();
 };
