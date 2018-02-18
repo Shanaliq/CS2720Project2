@@ -29,6 +29,7 @@ public:
     void clear(); // list contains no items, Length is 0, all node pointer memory freed.
     void pairwiseSwap(); // items in the list are sorted before swapping and the adjacent pare nodes are swapped according to their index positions.
 	void printList();
+    int iterateList();
 };
 
 

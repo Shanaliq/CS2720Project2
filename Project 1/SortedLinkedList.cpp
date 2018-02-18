@@ -10,6 +10,7 @@
 #include "SortedLinkedList.h"
 using namespace std;
 int lengthCount;
+
     SortedLinkedList::SortedLinkedList() {
         lengthCount = 0;
     }
@@ -131,7 +132,7 @@ void SortedLinkedList::printList() { // prints out the linked list.
     free(tempPtr);
 	}
 
-ing SortedLinkedList::iterateList(){
+int SortedLinkedList::iterateList(){
     
     
 }
