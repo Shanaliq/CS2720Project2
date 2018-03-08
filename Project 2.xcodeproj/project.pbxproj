@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F406F621203A014B00B89FC3 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = F406F620203A014A00B89FC3 /* Makefile */; };
 		F4907EBA203209CA00551C8A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4907EB9203209CA00551C8A /* main.cpp */; };
 		F4907EC2203213F900551C8A /* DataType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4907EC0203213F900551C8A /* DataType.cpp */; };
 		F4907EC52032169300551C8A /* SortedLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4907EC32032169300551C8A /* SortedLinkedList.cpp */; };
+		F4CE0BD92051E1B2001775D6 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = F4CE0BD82051E1B2001775D6 /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F406F620203A014A00B89FC3 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		F4507FCC203664A9009A2637 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = SOURCE_ROOT; };
 		F4907EB6203209CA00551C8A /* Project 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Project 2"; path = "/Users/Home/Desktop/CS2720Project2/build/Debug/Project 2"; sourceTree = "<absolute>"; };
 		F4907EB9203209CA00551C8A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		F4907EC32032169300551C8A /* SortedLinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortedLinkedList.cpp; sourceTree = "<group>"; };
 		F4907EC42032169300551C8A /* SortedLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortedLinkedList.h; sourceTree = "<group>"; };
 		F4907EC720321AFD00551C8A /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		F4CE0BD82051E1B2001775D6 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				F4907EC1203213F900551C8A /* DataType.h */,
 				F4907EC0203213F900551C8A /* DataType.cpp */,
 				F4507FCC203664A9009A2637 /* input.txt */,
-				F406F620203A014A00B89FC3 /* Makefile */,
+				F4CE0BD82051E1B2001775D6 /* Makefile */,
 			);
 			path = "Project 2";
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 			files = (
 				F4907EBA203209CA00551C8A /* main.cpp in Sources */,
 				F4907EC52032169300551C8A /* SortedLinkedList.cpp in Sources */,
-				F406F621203A014B00B89FC3 /* Makefile in Sources */,
+				F4CE0BD92051E1B2001775D6 /* Makefile in Sources */,
 				F4907EC2203213F900551C8A /* DataType.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
