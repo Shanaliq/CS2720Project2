@@ -51,8 +51,8 @@ void printBreakLine() {
 }
 
 int main(int argc, const char * argv[]) {
-	string file = argv[1];
-	fileHandler(file); // handles opening the file and creating an (unsorted) Linked List
+	//string file = argv[1];
+	fileHandler("/Users/Home/Desktop/CS2720Project2/input.txt"); // handles opening the file and creating an (unsorted) Linked List
 	printCommands(); // prints the commands and wait for user input.
 	continueLoop = 1;
 	list->printList();
