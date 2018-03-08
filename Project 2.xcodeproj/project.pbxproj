@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		F406F620203A014A00B89FC3 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		F4507FCC203664A9009A2637 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = SOURCE_ROOT; };
-		F4907EB6203209CA00551C8A /* Project 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project 1"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4907EB6203209CA00551C8A /* Project 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Project 2"; path = "/Users/Home/Desktop/CS2720Project2/build/Debug/Project 2"; sourceTree = "<absolute>"; };
 		F4907EB9203209CA00551C8A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F4907EC0203213F900551C8A /* DataType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataType.cpp; sourceTree = "<group>"; };
 		F4907EC1203213F900551C8A /* DataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
@@ -51,20 +51,11 @@
 		F4907EAD203209CA00551C8A = {
 			isa = PBXGroup;
 			children = (
-				F4907EB8203209CA00551C8A /* Project 1 */,
-				F4907EB7203209CA00551C8A /* Products */,
+				F4907EB8203209CA00551C8A /* Project 2 */,
 			);
 			sourceTree = "<group>";
 		};
-		F4907EB7203209CA00551C8A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F4907EB6203209CA00551C8A /* Project 1 */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F4907EB8203209CA00551C8A /* Project 1 */ = {
+		F4907EB8203209CA00551C8A /* Project 2 */ = {
 			isa = PBXGroup;
 			children = (
 				F4907EB9203209CA00551C8A /* main.cpp */,
@@ -76,15 +67,15 @@
 				F4507FCC203664A9009A2637 /* input.txt */,
 				F406F620203A014A00B89FC3 /* Makefile */,
 			);
-			path = "Project 1";
+			path = "Project 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4907EB5203209CA00551C8A /* Project 1 */ = {
+		F4907EB5203209CA00551C8A /* Project 2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4907EBD203209CA00551C8A /* Build configuration list for PBXNativeTarget "Project 1" */;
+			buildConfigurationList = F4907EBD203209CA00551C8A /* Build configuration list for PBXNativeTarget "Project 2" */;
 			buildPhases = (
 				F4907EB2203209CA00551C8A /* Sources */,
 				F4907EB3203209CA00551C8A /* Frameworks */,
@@ -94,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "Project 1";
+			name = "Project 2";
 			productName = "Project 1";
-			productReference = F4907EB6203209CA00551C8A /* Project 1 */;
+			productReference = F4907EB6203209CA00551C8A /* Project 2 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4907EB1203209CA00551C8A /* Build configuration list for PBXProject "Project 1" */;
+			buildConfigurationList = F4907EB1203209CA00551C8A /* Build configuration list for PBXProject "Project 2" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,11 +113,11 @@
 				en,
 			);
 			mainGroup = F4907EAD203209CA00551C8A;
-			productRefGroup = F4907EB7203209CA00551C8A /* Products */;
+			productRefGroup = F4907EAD203209CA00551C8A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4907EB5203209CA00551C8A /* Project 1 */,
+				F4907EB5203209CA00551C8A /* Project 2 */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +259,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4907EB1203209CA00551C8A /* Build configuration list for PBXProject "Project 1" */ = {
+		F4907EB1203209CA00551C8A /* Build configuration list for PBXProject "Project 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4907EBB203209CA00551C8A /* Debug */,
@@ -277,7 +268,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4907EBD203209CA00551C8A /* Build configuration list for PBXNativeTarget "Project 1" */ = {
+		F4907EBD203209CA00551C8A /* Build configuration list for PBXNativeTarget "Project 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4907EBE203209CA00551C8A /* Debug */,
