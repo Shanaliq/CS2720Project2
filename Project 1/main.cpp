@@ -23,9 +23,9 @@ void printCommands() { // prints out the commands to the screen and waits for us
 }
 
 
-void fileHandler(){ // handles the file input.
+void fileHandler(string file){ // handles the file input.
     ifstream inFile;
-    inFile.open("/Users/Home/Desktop/Project 1/input.txt");
+    inFile.open(file);
     if(!inFile){
         cout << "Unable to open file\n";
         exit(1);
