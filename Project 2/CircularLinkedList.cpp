@@ -75,6 +75,7 @@ void CircularLinkedList::deleteItem(ItemType &item){
     NodeType *iterator = new NodeType;
     int counter = 0;
     iterator = head;
+    int deletedSomething = 0;
     while(counter < length){
         if(iterator->next->data.getValue() == item.getValue()){
             NodeType *tempNode = new NodeType;
@@ -83,23 +84,32 @@ void CircularLinkedList::deleteItem(ItemType &item){
                 iterator->next = iterator->next->next;
                 head = iterator->next;
                 length --;
+                counter--;
+                deletedSomething++;
             }
             else if(iterator->next == current){
                 tempNode = iterator->next;
                 iterator->next = iterator->next->next;
                 current = iterator->next;
                 length --;
+                counter --;
+                deletedSomething++;
             }
             else{
                 tempNode = iterator->next;
                 iterator->next = iterator->next->next;
                 length--;
+                counter--;
+                deletedSomething++;
             }
         }
         else{
          iterator = iterator->next;
         }
         counter++;
+    }
+    if(deletedSomething==0){
+        std::cout<<"Item not in list!\n";
     }
 }
 
