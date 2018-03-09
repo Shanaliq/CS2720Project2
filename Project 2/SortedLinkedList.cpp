@@ -11,6 +11,7 @@ using namespace std;
 int lengthCount;
 int firstIterate;
 ListNode *userIterator;
+
 SortedLinkedList::SortedLinkedList() {
 	lengthCount = 0;
 	firstIterate = 0;
