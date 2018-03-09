@@ -7,3 +7,19 @@
 //
 
 #include "ItemType.h"
+#include <iostream>
+
+ItemType::ItemType(){
+}
+
+void ItemType::print(){
+    std::cout << this->value << "\n";
+}
+
+void ItemType::initialize(int number){
+    this->value = number;
+}
+
+int ItemType::getVlue() const {
+    return this->value;
+}
