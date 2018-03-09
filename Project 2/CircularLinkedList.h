@@ -31,6 +31,7 @@ private:
 public:
     CircularLinkedList(); // List is Created
     ~CircularLinkedList(); // All Nodes Are Freed.
+    int lengthIs() const;
     void insertItem(ItemType &item); //item is inserted into the list in sorted order.
     void deleteItem(ItemType &item); //node with that item is removed from the list.
     void print();

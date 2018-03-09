@@ -18,7 +18,16 @@ CircularLinkedList::CircularLinkedList(){
 }
 
 CircularLinkedList::~CircularLinkedList(){
-    
+    while (head != NULL) {
+        NodeType* temp = head->next;
+        delete head;
+        head = temp;
+    }
+    length = 0;
+}
+
+int CircularLinkedList::lengthIs() const{
+    return length;
 }
 
 void CircularLinkedList::insertItem(ItemType &item){
@@ -28,23 +37,21 @@ void CircularLinkedList::insertItem(ItemType &item){
         current = tempNode;
         head = tempNode;
         current->next = head;
-        length ++;
         //  std::cout << "handling "<< newNode->item.getValue()<< "\n";
     }
-    else if (head->data.getVlue()  > item.getVlue()) {
+    else if (head->data.getValue()  >= item.getValue()) {
         NodeType *tempNode = new NodeType;
         tempNode->data = item;
         tempNode->next = head;
         current->next = tempNode;
         head = tempNode;
-        length ++;
         //  std::cout << "handling "<< newNode->item.getValue()<< "\n";
     }
-    else if (head->data.getVlue() < item.getVlue()) {
+    else if (head->data.getValue() < item.getValue()) {
         NodeType *iterator = new NodeType;
         iterator = head;
         while (iterator->next != head) {
-            if (iterator->next->data.getVlue() < item.getVlue()) {
+            if (iterator->next->data.getValue() < item.getValue()) {
                 iterator = iterator->next;
             }
             else {
@@ -59,23 +66,52 @@ void CircularLinkedList::insertItem(ItemType &item){
             iterator = iterator -> next;
         }
         current = iterator;
-        length ++;
     }
+    length++;
     // std::cout << "handling "<< newNode->item.getValue()<< "\n";
 }
 
 void CircularLinkedList::deleteItem(ItemType &item){
-    
+    NodeType *iterator = new NodeType;
+    int counter = 0;
+    iterator = head;
+    while(counter < length){
+        if(iterator->next->data.getValue() == item.getValue()){
+            NodeType *tempNode = new NodeType;
+            if(iterator->next == head){
+                tempNode = iterator->next;
+                iterator->next = iterator->next->next;
+                head = iterator->next;
+                length --;
+            }
+            else if(iterator->next == current){
+                tempNode = iterator->next;
+                iterator->next = iterator->next->next;
+                current = iterator->next;
+                length --;
+            }
+            else{
+                tempNode = iterator->next;
+                iterator->next = iterator->next->next;
+                length--;
+            }
+        }
+        else{
+         iterator = iterator->next;
+        }
+        counter++;
+    }
 }
 
 void CircularLinkedList::print(){
-    NodeType *tempPtr = new NodeType;
+    NodeType *tempPtr;
     tempPtr = head;
-    while (tempPtr->next != head) {
-        std::cout << tempPtr->data.getVlue() << " ";
+    int counter = 0;
+    while (counter < length) {
+        std::cout << tempPtr->data.getValue() << " ";
         tempPtr = tempPtr->next;
+        counter++;
     }
     //std::cout <<" Length is= ("<<lengthCount<< ") ";
     std::cout << "\n";
-    delete tempPtr;
 }

@@ -1,7 +1,5 @@
-buld/main.o: main.cpp SortedLinkedList.h ListNode.h DataType.h
+buld/main.o: main.cpp CircularLinkedList.h ItemType.h
 
-SortedLinkedList.h:
+CircularLinkedList.h:
 
-ListNode.h:
-
-DataType.h:
+ItemType.h:

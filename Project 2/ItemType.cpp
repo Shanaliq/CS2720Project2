@@ -20,6 +20,6 @@ void ItemType::initialize(int number){
     this->value = number;
 }
 
-int ItemType::getVlue() const {
+int ItemType::getValue() const {
     return this->value;
 }

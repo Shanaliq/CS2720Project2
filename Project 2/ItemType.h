@@ -22,5 +22,5 @@ public:
     ItemType();
     void print(); // ItemType object is created
     void initialize(int number); // ItemType object has been initialized, instance variable is printed to standard out.
-    int getVlue() const; // ItemType object has been initialized and returns the value instance variable.
+    int getValue() const; // ItemType object has been initialized and returns the value instance variable.
 };
