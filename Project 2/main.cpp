@@ -19,7 +19,7 @@ using namespace std;
 SortedLinkedList *list = new SortedLinkedList();
 
 void printCommands() { // prints out the commands to the screen and waits for user input.
-	std::cout << "Commands,\n\n \t(i) - Insert value \n \t(d) - Delete value \n \t(s) - Search value \n \t(n) - Print iterator's next value \n \t(r) - Reset iterator \n \t(p) - Print list \n \t(l) - Print length \n \t(b) - Parewise Swap \n \t(c) - Clear List \n \t(q) - Quit Program \n\n";
+	std::cout << "insert (i), delete (d), Length (l), print (p), quit (q) /n/n";
 }
 
 
@@ -53,7 +53,7 @@ void printBreakLine() {
 int main(int argc, const char * argv[]) {
 	//string file = argv[1];
     //fjdklsa
-	fileHandler("/Users/Home/Desktop/CS2720Project2/input.txt"); // handles opening the file and creating an (unsorted) Linked List
+	fileHandler("/Users/nekosama/Documents/CS2720Project2/input.txt"); // handles opening the file and creating an (unsorted) Linked List
 	printCommands(); // prints the commands and wait for user input.
 	continueLoop = 1;
 	list->printList();

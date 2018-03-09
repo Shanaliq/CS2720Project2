@@ -28,8 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		806985EE2052E99E0082B914 /* Project 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Project 2"; path = "/Users/nekosama/Documents/CS2720Project2/build/Debug/Project 2"; sourceTree = "<absolute>"; };
 		F4507FCC203664A9009A2637 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = SOURCE_ROOT; };
-		F4907EB6203209CA00551C8A /* Project 2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Project 2"; path = "/Users/Home/Desktop/CS2720Project2/build/Debug/Project 2"; sourceTree = "<absolute>"; };
 		F4907EB9203209CA00551C8A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F4907EC0203213F900551C8A /* DataType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataType.cpp; sourceTree = "<group>"; };
 		F4907EC1203213F900551C8A /* DataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
@@ -68,6 +68,7 @@
 				F4907EC42032169300551C8A /* SortedLinkedList.h */,
 				F4907EC32032169300551C8A /* SortedLinkedList.cpp */,
 				F4CE0BDE2051EE64001775D6 /* CircularLinkedList.h */,
+				F4CE0BDD2051EE64001775D6 /* CircularLinkedList.cpp */,
 				F4907EC720321AFD00551C8A /* ListNode.h */,
 				F4907EC1203213F900551C8A /* DataType.h */,
 				F4907EC0203213F900551C8A /* DataType.cpp */,
@@ -75,7 +76,6 @@
 				F4CE0BD82051E1B2001775D6 /* Makefile */,
 				F4CE0BDA2051E619001775D6 /* ItemType.cpp */,
 				F4CE0BDB2051E619001775D6 /* ItemType.h */,
-				F4CE0BDD2051EE64001775D6 /* CircularLinkedList.cpp */,
 			);
 			path = "Project 2";
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			);
 			name = "Project 2";
 			productName = "Project 1";
-			productReference = F4907EB6203209CA00551C8A /* Project 2 */;
+			productReference = 806985EE2052E99E0082B914 /* Project 2 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
