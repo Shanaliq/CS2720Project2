@@ -110,8 +110,11 @@ int main(int argc, const char * argv[]) {
             exit(0);
             break;
         }
+        default:{
+                std::cout<<"Command not recognized. Try again\n";
+                break;
+            }
         }
-        
     }
 }
 

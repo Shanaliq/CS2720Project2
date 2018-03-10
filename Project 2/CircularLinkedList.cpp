@@ -18,7 +18,7 @@ CircularLinkedList::CircularLinkedList(){
 }
 
 CircularLinkedList::~CircularLinkedList(){
-    while (head != NULL) {
+    while (head->next != NULL) {
         NodeType* temp = head->next;
         delete head;
         head = temp;
